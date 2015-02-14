@@ -1,0 +1,12 @@
+library(shiny)
+shinyUI(pageWithSidebar(
+  #Application title
+  headerPanel("Example plot"),
+  sidebarPanel(
+  sliderInput('mean','Guess the mean',value=70,min=62,max=74,step=0.05) 
+  ),
+  mainPanel(
+    plotOutput('newHist')   
+  )
+ )
+)
